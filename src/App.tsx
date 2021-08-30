@@ -1,5 +1,5 @@
 import { useEffect, useState, useMemo } from 'react';
-import { Main, SearchInput, Header, TextInput, Link, Field, useViewport } from '@aragon/ui';
+import { Main, Box, SearchInput, Header, TextInput, Link, Field, useViewport } from '@aragon/ui';
 import styled from 'styled-components';
 
 function noop() {
@@ -21,16 +21,20 @@ function getQuery(subgraphName: string) {
             handler
           }
           chains {
+            network
+            earliestBlock {
+              number
+            }
             chainHeadBlock {
               number
             }
-          latestBlock {
-            number
+            latestBlock {
+              number
+            }
           }
         }
       }
-    }
-  `,
+    `,
   };
 }
 
@@ -81,30 +85,32 @@ function App() {
       <div className="scroll-view">
         <Main scrollView={false}>
           <Header primary="Subgraph Health" />
-          <Field label="Subgraph Name">
-            <SearchInput
-              value={subgraphName}
-              placeholder="Subgraph name, i.e. evalir/aragon-govern-rinkeby"
-              wide
-              onChange={setSubgraphName}
-            />
-          </Field>
-          {subgraphName && (
-            <>
-              <Field label="Subgraph legacy explorer">
-                <Link href={explorerUrl}>{explorerUrl}</Link>
-              </Field>
-              <Field label="Health status">
-                <StyledTextInput
-                  height={height}
-                  value={result}
-                  wide
-                  multiline
-                  onChange={noop}
-                ></StyledTextInput>
-              </Field>
-            </>
-          )}
+          <Box>
+            <Field label="Subgraph Name">
+              <SearchInput
+                value={subgraphName}
+                placeholder="Subgraph name, i.e. evalir/aragon-govern-rinkeby"
+                wide
+                onChange={setSubgraphName}
+              />
+            </Field>
+            {subgraphName && (
+              <>
+                <Field label="Subgraph legacy explorer">
+                  <StyledLink href={explorerUrl}>{explorerUrl}</StyledLink>
+                </Field>
+                <Field label="Health status">
+                  <StyledTextInput
+                    height={height}
+                    value={result}
+                    wide
+                    multiline
+                    onChange={noop}
+                  ></StyledTextInput>
+                </Field>
+              </>
+            )}
+          </Box>
         </Main>
       </div>
     </div>
@@ -113,6 +119,13 @@ function App() {
 
 const StyledTextInput = styled(TextInput)`
   height: ${(props) => `${props.height - 300}px`};
+`;
+
+const StyledLink = styled(Link)`
+  word-break: break-all;
+  overflow-wrap: break-word;
+  white-space: normal;
+  text-align: left;
 `;
 
 export default App;
