@@ -39,7 +39,7 @@ function getQuery(subgraphName: string) {
 }
 
 function App() {
-  const [subgraphName, setSubgraphName] = useState('evalir/aragon-govern-rinkeby');
+  const [subgraphName, setSubgraphName] = useState('yuetloo/clrfund');
   const [result, setResult] = useState('');
   const { height } = useViewport();
 
