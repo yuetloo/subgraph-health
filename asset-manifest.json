@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/subgraph-health/static/css/main.f0538d58.chunk.css",
-    "main.js": "/subgraph-health/static/js/main.11487845.chunk.js",
-    "main.js.map": "/subgraph-health/static/js/main.11487845.chunk.js.map",
+    "main.js": "/subgraph-health/static/js/main.02bb33f0.chunk.js",
+    "main.js.map": "/subgraph-health/static/js/main.02bb33f0.chunk.js.map",
     "runtime-main.js": "/subgraph-health/static/js/runtime-main.71eeb34d.js",
     "runtime-main.js.map": "/subgraph-health/static/js/runtime-main.71eeb34d.js.map",
     "static/js/2.14e7b6e8.chunk.js": "/subgraph-health/static/js/2.14e7b6e8.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.71eeb34d.js",
     "static/js/2.14e7b6e8.chunk.js",
     "static/css/main.f0538d58.chunk.css",
-    "static/js/main.11487845.chunk.js"
+    "static/js/main.02bb33f0.chunk.js"
   ]
 }
