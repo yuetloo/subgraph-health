@@ -89,7 +89,7 @@ function App() {
             <Field label="Subgraph Name">
               <SearchInput
                 value={subgraphName}
-                placeholder="Subgraph name, i.e. evalir/aragon-govern-rinkeby"
+                placeholder="Subgraph name, i.e. yuetloo/clrfund"
                 wide
                 onChange={setSubgraphName}
               />
