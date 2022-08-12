@@ -6,10 +6,10 @@ function noop() {
   return null;
 }
 const GRAPH_URL = 'https://api.thegraph.com/index-node/graphql';
-function getQuery(subgraphName: string) {
+function getQuery(subgraphId: string) {
   return {
     query: `
-      { indexingStatusForCurrentVersion(subgraphName: "${subgraphName}") {
+      { indexingStatuses(subgraphs: ["${subgraphId}"]) {
           synced
           health
           fatalError {
@@ -39,7 +39,7 @@ function getQuery(subgraphName: string) {
 }
 
 function App() {
-  const [subgraphName, setSubgraphName] = useState('yuetloo/clrfund');
+  const [subgraphId, setSubgraphId] = useState('Qmet67pWbJPhVU5nLL6QfppkjKuyuxPtvJeP5voXidmGvo');
   const [result, setResult] = useState('');
   const { height } = useViewport();
 
@@ -49,11 +49,11 @@ function App() {
     let cancel = false;
 
     const getHealth = async () => {
-      if (!subgraphName) {
+      if (!subgraphId) {
         setResult('');
         return;
       }
-      const data = getQuery(subgraphName);
+      const data = getQuery(subgraphId);
       const response = await fetch(GRAPH_URL, {
         method: 'POST',
         headers: {
@@ -74,11 +74,7 @@ function App() {
     return () => {
       cancel = true;
     };
-  }, [subgraphName]);
-
-  const explorerUrl = useMemo(() => {
-    return `https://thegraph.com/legacy-explorer/subgraph/${subgraphName}`;
-  }, [subgraphName]);
+  }, [subgraphId]);
 
   return (
     <div className="scroll-view-container">
@@ -86,19 +82,16 @@ function App() {
         <Main scrollView={false}>
           <Header primary="Subgraph Health" />
           <Box>
-            <Field label="Subgraph Name">
+            <Field label="Subgraph Id">
               <SearchInput
-                value={subgraphName}
-                placeholder="Subgraph name, i.e. yuetloo/clrfund"
+                value={subgraphId}
+                placeholder="Subgraph Id, i.e. Qm..."
                 wide
-                onChange={setSubgraphName}
+                onChange={setSubgraphId}
               />
             </Field>
-            {subgraphName && (
+            {subgraphId && (
               <>
-                <Field label="Subgraph legacy explorer">
-                  <StyledLink href={explorerUrl}>{explorerUrl}</StyledLink>
-                </Field>
                 <Field label="Health status">
                   <StyledTextInput
                     height={height}
