@@ -1,4 +1,4 @@
-import { useEffect, useState, useMemo } from 'react';
+import { useEffect, useState } from 'react';
 import { Main, Box, SearchInput, Header, TextInput, Link, Field, useViewport } from '@aragon/ui';
 import styled from 'styled-components';
 
@@ -112,13 +112,6 @@ function App() {
 
 const StyledTextInput = styled(TextInput)`
   height: ${(props) => `${props.height - 300}px`};
-`;
-
-const StyledLink = styled(Link)`
-  word-break: break-all;
-  overflow-wrap: break-word;
-  white-space: normal;
-  text-align: left;
 `;
 
 export default App;
