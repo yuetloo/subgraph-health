@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/subgraph-health/static/css/main.f0538d58.chunk.css",
-    "main.js": "/subgraph-health/static/js/main.932d1fbc.chunk.js",
-    "main.js.map": "/subgraph-health/static/js/main.932d1fbc.chunk.js.map",
+    "main.js": "/subgraph-health/static/js/main.6e15c4ed.chunk.js",
+    "main.js.map": "/subgraph-health/static/js/main.6e15c4ed.chunk.js.map",
     "runtime-main.js": "/subgraph-health/static/js/runtime-main.71eeb34d.js",
     "runtime-main.js.map": "/subgraph-health/static/js/runtime-main.71eeb34d.js.map",
-    "static/js/2.14e7b6e8.chunk.js": "/subgraph-health/static/js/2.14e7b6e8.chunk.js",
-    "static/js/2.14e7b6e8.chunk.js.map": "/subgraph-health/static/js/2.14e7b6e8.chunk.js.map",
+    "static/js/2.6113be5c.chunk.js": "/subgraph-health/static/js/2.6113be5c.chunk.js",
+    "static/js/2.6113be5c.chunk.js.map": "/subgraph-health/static/js/2.6113be5c.chunk.js.map",
     "static/js/3.a8669d3b.chunk.js": "/subgraph-health/static/js/3.a8669d3b.chunk.js",
     "static/js/3.a8669d3b.chunk.js.map": "/subgraph-health/static/js/3.a8669d3b.chunk.js.map",
     "index.html": "/subgraph-health/index.html",
     "static/css/main.f0538d58.chunk.css.map": "/subgraph-health/static/css/main.f0538d58.chunk.css.map",
-    "static/js/2.14e7b6e8.chunk.js.LICENSE.txt": "/subgraph-health/static/js/2.14e7b6e8.chunk.js.LICENSE.txt"
+    "static/js/2.6113be5c.chunk.js.LICENSE.txt": "/subgraph-health/static/js/2.6113be5c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.71eeb34d.js",
-    "static/js/2.14e7b6e8.chunk.js",
+    "static/js/2.6113be5c.chunk.js",
     "static/css/main.f0538d58.chunk.css",
-    "static/js/main.932d1fbc.chunk.js"
+    "static/js/main.6e15c4ed.chunk.js"
   ]
 }
