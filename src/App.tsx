@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Main, Box, SearchInput, Header, TextInput, Link, Field, useViewport } from '@aragon/ui';
+import { Main, Box, SearchInput, Header, TextInput, Field, useViewport } from '@aragon/ui';
 import styled from 'styled-components';
 
 function noop() {
